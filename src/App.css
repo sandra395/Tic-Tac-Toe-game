@@ -1,0 +1,107 @@
+/* --- Tic Tac Toe CSS --- */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 55px;
+}
+
+h2,
+.winner {
+  color: green;
+  margin-bottom: 20px;
+}
+
+.turn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.cross-turn {
+  color: #2196f3;
+}
+
+.circle-turn {
+  color: #ff5722;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 10px;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 4px solid #333;
+  font-size: 2rem;
+  border-radius: 6px;
+}
+
+.box img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.box:hover {
+  background-color: #ddd;
+}
+
+button {
+  margin-top: 20px;
+  padding: 15px 35px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  background-color: #2196f3;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* --- Responsive for small screens --- */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 10vw;
+  }
+
+  .turn {
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 90vw;
+    max-width: 300px;
+    gap: 5px;
+  }
+
+  .box {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    font-size: 6vw;
+  }
+}
